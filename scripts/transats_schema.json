@@ -1,0 +1,308 @@
+[
+  {
+    "description": "Flight Date (yyyymmdd)",
+    "mode": "NULLABLE",
+    "name": "FL_DATE",
+    "type": "DATE"
+  },
+  {
+    "description": "Unique Carrier Code. When the same code has been used by multiple carriers, a numeric suffix is used for earlier users, for example, PA, PA(1), PA(2). Use this field for analysis across a range of years.",
+    "mode": "NULLABLE",
+    "name": "UNIQUE_CARRIER",
+    "type": "STRING"
+  },
+  {
+    "description": "An identification number assigned by US DOT to identify a unique airline (carrier). A unique airline (carrier) is defined as one holding and reporting under the same DOT certificate regardless of its Code, Name, or holding company/corporation.",
+    "mode": "NULLABLE",
+    "name": "AIRLINE_ID",
+    "type": "STRING"
+  },
+  {
+    "description": "Code assigned by IATA and commonly used to identify a carrier. As the same code may have been assigned to different carriers over time, the code is not always unique. For analysis, use the Unique Carrier Code.",
+    "mode": "NULLABLE",
+    "name": "CARRIER",
+    "type": "STRING"
+  },
+  {
+    "description": "Tail Number",
+    "mode": "NULLABLE",
+    "name": "TAIL_NUM",
+    "type": "STRING"
+  },
+  {
+    "description": "Flight Number",
+    "mode": "NULLABLE",
+    "name": "FL_NUM",
+    "type": "STRING"
+  },
+  {
+    "description": "Origin Airport, Airport ID. An identification number assigned by US DOT to identify a unique airport.  Use this field for airport analysis across a range of years because an airport can change its airport code and airport codes can be reused.",
+    "mode": "NULLABLE",
+    "name": "ORIGIN_AIRPORT_ID",
+    "type": "STRING"
+  },
+  {
+    "description": "Origin Airport, Airport Sequence ID. An identification number assigned by US DOT to identify a unique airport at a given point of time.  Airport attributes, such as airport name or coordinates, may change over time.",
+    "mode": "NULLABLE",
+    "name": "ORIGIN_AIRPORT_SEQ_ID",
+    "type": "STRING"
+  },
+  {
+    "description": "Origin Airport, City Market ID. City Market ID is an identification number assigned by US DOT to identify a city market.  Use this field to consolidate airports serving the same city market.",
+    "mode": "NULLABLE",
+    "name": "ORIGIN_CITY_MARKET_ID",
+    "type": "STRING"
+  },
+  {
+    "description": "Origin Airport",
+    "mode": "NULLABLE",
+    "name": "ORIGIN",
+    "type": "STRING"
+  },
+  {
+    "description": "Origin Airport, City Name",
+    "mode": "NULLABLE",
+    "name": "ORIGIN_CITY_NAME",
+    "type": "STRING"
+  },
+  {
+    "description": "Origin Airport, State Code",
+    "mode": "NULLABLE",
+    "name": "ORIGIN_STATE_ABR",
+    "type": "STRING"
+  },
+  {
+    "description": "Origin Airport, State Fips",
+    "mode": "NULLABLE",
+    "name": "ORIGIN_STATE_FIPS",
+    "type": "STRING"
+  },
+  {
+    "description": "Origin Airport, State Name",
+    "mode": "NULLABLE",
+    "name": "ORIGIN_STATE_NM",
+    "type": "STRING"
+  },
+  {
+    "description": "Origin Airport, World Area Code",
+    "mode": "NULLABLE",
+    "name": "ORIGIN_WAC",
+    "type": "STRING"
+  },
+  {
+    "description": "Destination Airport, Airport ID. An identification number assigned by US DOT to identify a unique airport.  Use this field for airport analysis across a range of years because an airport can change its airport code and airport codes can be reused.",
+    "mode": "NULLABLE",
+    "name": "DEST_AIRPORT_ID",
+    "type": "STRING"
+  },
+  {
+    "description": "Destination Airport, Airport Sequence ID. An identification number assigned by US DOT to identify a unique airport at a given point of time.  Airport attributes, such as airport name or coordinates, may change over time.",
+    "mode": "NULLABLE",
+    "name": "DEST_AIRPORT_SEQ_ID",
+    "type": "STRING"
+  },
+  {
+    "description": "Destination Airport, City Market ID. City Market ID is an identification number assigned by US DOT to identify a city market.  Use this field to consolidate airports serving the same city market.",
+    "mode": "NULLABLE",
+    "name": "DEST_CITY_MARKET_ID",
+    "type": "STRING"
+  },
+  {
+    "description": "Destination Airport",
+    "mode": "NULLABLE",
+    "name": "DEST",
+    "type": "STRING"
+  },
+  {
+    "description": "Destination Airport, City Name",
+    "mode": "NULLABLE",
+    "name": "DEST_CITY_NAME",
+    "type": "STRING"
+  },
+  {
+    "description": "Destination Airport, State Code",
+    "mode": "NULLABLE",
+    "name": "DEST_STATE_ABR",
+    "type": "STRING"
+  },
+  {
+    "description": "Destination Airport, State Fips",
+    "mode": "NULLABLE",
+    "name": "DEST_STATE_FIPS",
+    "type": "STRING"
+  },
+  {
+    "description": "Destination Airport, State Name",
+    "mode": "NULLABLE",
+    "name": "DEST_STATE_NM",
+    "type": "STRING"
+  },
+  {
+    "description": "Destination Airport, World Area Code",
+    "mode": "NULLABLE",
+    "name": "DEST_WAC",
+    "type": "STRING"
+  },
+  {
+    "description": "CRS Departure Time (local time: hhmm)",
+    "mode": "NULLABLE",
+    "name": "CRS_DEP_TIME",
+    "type": "STRING"
+  },
+  {
+    "description": "Actual Departure Time (local time: hhmm)",
+    "mode": "NULLABLE",
+    "name": "DEP_TIME",
+    "type": "STRING"
+  },
+  {
+    "description": "Difference in minutes between scheduled and actual departure time. Early departures show negative numbers.",
+    "mode": "NULLABLE",
+    "name": "DEP_DELAY",
+    "type": "NUMERIC"
+  },
+  {
+    "description": "Difference in minutes between scheduled and actual departure time. Early departures set to 0.",
+    "mode": "NULLABLE",
+    "name": "DEP_DELAY_NEW",
+    "type": "NUMERIC"
+  },
+  {
+    "description": "Departure Delay Indicator, 15 Minutes or More (1=Yes)",
+    "mode": "NULLABLE",
+    "name": "DEP_DEL15",
+    "type": "STRING"
+  },
+  {
+    "description": "Departure Delay intervals, every (15 minutes from <-15 to >180)",
+    "mode": "NULLABLE",
+    "name": "DEP_DELAY_GROUP",
+    "type": "STRING"
+  },
+  {
+    "description": "CRS Departure Time Block, Hourly Intervals",
+    "mode": "NULLABLE",
+    "name": "DEP_TIME_BLK",
+    "type": "STRING"
+  },
+  {
+    "description": "Taxi Out Time, in Minutes",
+    "mode": "NULLABLE",
+    "name": "TAXI_OUT",
+    "type": "STRING"
+  },
+  {
+    "description": "Wheels Off Time (local time: hhmm)",
+    "mode": "NULLABLE",
+    "name": "WHEELS_OFF",
+    "type": "STRING"
+  },
+  {
+    "description": "Wheels On Time (local time: hhmm)",
+    "mode": "NULLABLE",
+    "name": "WHEELS_ON",
+    "type": "STRING"
+  },
+  {
+    "description": "Taxi In Time, in Minutes",
+    "mode": "NULLABLE",
+    "name": "TAXI_IN",
+    "type": "STRING"
+  },
+  {
+    "description": "CRS Arrival Time (local time: hhmm)",
+    "mode": "NULLABLE",
+    "name": "CRS_ARR_TIME",
+    "type": "STRING"
+  },
+  {
+    "description": "Actual Arrival Time (local time: hhmm)",
+    "mode": "NULLABLE",
+    "name": "ARR_TIME",
+    "type": "STRING"
+  },
+  {
+    "description": "Difference in minutes between scheduled and actual arrival time. Early arrivals show negative numbers.",
+    "mode": "NULLABLE",
+    "name": "ARR_DELAY",
+    "type": "NUMERIC"
+  },
+  {
+    "description": "Difference in minutes between scheduled and actual arrival time. Early arrivals set to 0.",
+    "mode": "NULLABLE",
+    "name": "ARR_DELAY_NEW",
+    "type": "NUMERIC"
+  },
+  {
+    "description": "Arrival Delay Indicator, 15 Minutes or More (1=Yes)",
+    "mode": "NULLABLE",
+    "name": "ARR_DEL15",
+    "type": "STRING"
+  },
+  {
+    "description": "Arrival Delay intervals, every (15-minutes from <-15 to >180)",
+    "mode": "NULLABLE",
+    "name": "ARR_DELAY_GROUP",
+    "type": "STRING"
+  },
+  {
+    "description": "CRS Arrival Time Block, Hourly Intervals",
+    "mode": "NULLABLE",
+    "name": "ARR_TIME_BLK",
+    "type": "STRING"
+  },
+  {
+    "description": "Cancelled Flight Indicator (1=Yes)",
+    "mode": "NULLABLE",
+    "name": "CANCELLED",
+    "type": "STRING"
+  },
+  {
+    "description": "Diverted Flight Indicator (1=Yes)",
+    "mode": "NULLABLE",
+    "name": "DIVERTED",
+    "type": "STRING"
+  },
+  {
+    "description": "CRS Elapsed Time of Flight, in Minutes",
+    "mode": "NULLABLE",
+    "name": "CRS_ELAPSED_TIME",
+    "type": "NUMERIC"
+  },
+  {
+    "description": "Elapsed Time of Flight, in Minutes",
+    "mode": "NULLABLE",
+    "name": "ACTUAL_ELAPSED_TIME",
+    "type": "NUMERIC"
+  },
+  {
+    "description": "Flight Time, in Minutes",
+    "mode": "NULLABLE",
+    "name": "AIR_TIME",
+    "type": "NUMERIC"
+  },
+  {
+    "description": "Number of Flights",
+    "mode": "NULLABLE",
+    "name": "FLIGHTS",
+    "type": "NUMERIC"
+  },
+  {
+    "description": "Distance between airports (miles)",
+    "mode": "NULLABLE",
+    "name": "DISTANCE",
+    "type": "NUMERIC"
+  },
+  {
+    "description": "Distance Intervals, every 250 Miles, for Flight Segment",
+    "mode": "NULLABLE",
+    "name": "DISTANCE_GROUP",
+    "type": "STRING"
+  },
+  {
+    "description": "None",
+    "mode": "NULLABLE",
+    "name": "None",
+    "type": "STRING"
+  }
+]
